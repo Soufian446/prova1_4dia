@@ -1,3 +1,4 @@
+
 let luoghiFirenze = [
   {
     nome: "Duomo di Firenze (Cattedrale di Santa Maria del Fiore)",
@@ -26,6 +27,23 @@ let luoghiFirenze = [
   }
 ];
 
+let container=document.getElementById("container");
 
+for(let i=0;i<luoghiFirenze.length;i++){
+    let div=document.createElement("div");
+    let h1=document.createElement("h1");
+    let p1=document.createElement("p");
+    let p2=document.createElement("p");
 
-alert("alert");
+    h1.innerHTML=luoghiFirenze[i].nome;
+    p1.innerHTML=luoghiFirenze[i].longitudine;
+    p2.innerHTML=luoghiFirenze[i].latitudine;
+    
+    div.appendChild(h1);
+    div.appendChild(p1);
+    div.appendChild(p2);
+
+    div.classList.add("card");
+
+    container.appendChild(div);
+}
