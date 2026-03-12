@@ -28,6 +28,7 @@ let luoghiFirenze = [
 ];
 
 let container=document.getElementById("container");
+var map = L.map('map').setView([43.7696, 11.2558], 13);
 
 for(let i=0;i<luoghiFirenze.length;i++){
     let div=document.createElement("div");
@@ -47,3 +48,8 @@ for(let i=0;i<luoghiFirenze.length;i++){
 
     container.appendChild(div);
 }
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
