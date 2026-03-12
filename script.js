@@ -53,3 +53,12 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
+
+for(let i=0;i<luoghiFirenze.length;i++){
+  let circle = L.circle([luoghiFirenze[i].latitudine,luoghiFirenze[i].longitudine], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 5
+  }).addTo(map);
+}
